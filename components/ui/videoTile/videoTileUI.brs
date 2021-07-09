@@ -3,6 +3,9 @@ Sub init()
     m.channelGroup = m.top.findNode("channelGroup")
     'Channel tile image'
     m.tileImage = m.top.findNode("tileImage")
+    m.titleLabel = m.top.findNode("titleLabel")
+
+
 End Sub
 
 
@@ -15,4 +18,5 @@ Function showcontent()
     httpAgent = m.tileImage.getHttpAgent()
     httpAgent.AddHeader("X-API-TOKEN", state.apiToken)
     m.tileImage.uri = itemContent.image
+    m.titleLabel.text = itemContent.title
 End Function
