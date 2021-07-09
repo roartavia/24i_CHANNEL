@@ -20,8 +20,6 @@ Sub init()
     m.currentViewIndex = 0
     ' Set initial state,
     m.global.addReplace("state", getInitialState())
-
-
     ' Start setting the content.
     startConfigFetch()
 End Sub
@@ -50,16 +48,6 @@ Function onConfigReady()
     else
         m.homeUI.callFunc("updateContent", m.global.state.channels)
     end if
-End Function
-
-'Displays the episode details screen'
-'@public'
-Function showEpisodeDetailsScreen(item as dynamic)
-    ' create view and add it to the mainScene
-    'Episode Details Screen'
-    m.episodeDetailsScreenUI = m.top.findNode("detailUI")
-    m.episodeDetailsScreenUI.visible = True
-    m.episodeDetailsScreenUI.callFunc("requestPlay", item)
 End Function
 
 'Displays the episode details screen'

@@ -49,16 +49,6 @@
             iconUri="pkg:/images/play2.png"
             focusedIconUri="pkg:/images/play2.png"
             text="Play"/>
-        <!-- Title -->
-        <!-- description -->
-        <!-- button if you are movie -->
-        <!-- <Video
-            id="video"
-            width="1920"
-            height="1080"
-            translation="[0,0]"
-            visible="false"> -->
-        <!-- </Video> -->
         <Dialog
             title="Video playback error"
             message="Error playing the stream"

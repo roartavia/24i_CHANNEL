@@ -29,9 +29,6 @@
             <WatchScreenUI
                 id="homeUI"
                 visible="false"/>
-            <EpisodeDetailsScreenUI
-                id="detailUI"
-                visible="false"/>
             <SearchScreenUI
                 id="searchUI"
                 visible="false"/>

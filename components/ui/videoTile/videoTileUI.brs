@@ -4,8 +4,6 @@ Sub init()
     'Channel tile image'
     m.tileImage = m.top.findNode("tileImage")
     m.titleLabel = m.top.findNode("titleLabel")
-
-
 End Sub
 
 
