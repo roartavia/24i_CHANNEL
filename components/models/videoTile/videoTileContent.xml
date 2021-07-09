@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="VideoTileContent" extends="ContentNode" >
+    <interface >
+        <field id="title" type="string" />
+        <field id="image" type="string" />
+        <field id="year" type="string" />
+        <field id="description" type="string" />
+        <field id="contentType" type="string" />
+        <field id="streamURL" type="string" />
+    </interface>
+</component>

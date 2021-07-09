@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+    <script type="text/brightscript" uri="pkg:/components/scene/mainScene.brs" />
+    <script type="text/brightscript" uri="pkg:/components/scene/initialState.brs" />
+    <interface>
+        <!-- Deeplinking use -->
+        <field id="launchArgs" type="assocarray" />
+        <!-- Display the episode details screen -->
+        <function name="showEpisodeDetailsScreen" />
+        <!-- Display the watch screen -->
+        <function name="showWatchScreen" />
+        <!-- Shows the menu dialog -->
+        <function name="showDialog" />
+        <!-- Shows the menu dialog -->
+        <function name="closeDialog" />
+        <!-- Return back the focus to the prev view -->
+        <function name="focusCurrentView" />
+        <!-- Return back the focus to the prev view -->
+        <function name="hideLoadingScreen" />
+        <!-- Return back the focus to the prev view -->
+        <function name="showLoadingScreen" />
+        <function name="showMenu" />
+    </interface>
+    <children>
+        <Group
+            id="viewsContainer"
+            translation="[0, 0]">
+            <!-- Watch Screen Section -->
+            <WatchScreenUI
+                id="homeUI"
+                visible="false"/>
+            <EpisodeDetailsScreenUI
+                id="detailUI"
+                visible="false"/>
+            <SearchScreenUI
+                id="searchUI"
+                visible="false"/>
+        </Group>
+        <!-- Loading Screen -->
+        <LoadingScreenUI
+            id="loadingScreen"
+            visible="true"
+            translation="[0,0]"/>
+        <!-- Dialog to show when there is an error in the feeds -->
+        <Dialog
+            id="errorDialog"
+            optionsDialog="true"
+            title="Connection problem"
+            message="This device is currently not connected to the Internet. Go online to watch and save videos."
+            visible="false">
+        </Dialog>
+    </children>
+</component>

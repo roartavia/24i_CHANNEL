@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="EpisodeDetailsScreenUI" extends="Group">
+    <script type="text/brightscript" uri="pkg:/components/ui/screens/episodeDetailsScreen/episodeDetailsScreenUI.brs"/>
+    <script type="text/brightscript" uri="pkg:/source/commons.brs" />
+    <interface>
+        <field id="item" type="node"/>
+        <field id="requestClose" type="boolean" alwaysnotify="true"/>
+        <field id="action" type="string" alwaysnotify="true"/>
+        <!-- Set the focus to this screen -->
+        <function name="setFocus" />
+    </interface>
+    <children>
+        <Rectangle
+            color="#808080"
+            width="1920"
+            height="1080"
+            translation="[0,0]" />
+        <Poster
+            id="tileImage"
+            width="500"
+            height="750"
+            failedBitmapUri="pkg:/images/tile/placeholder_image_thumbnails.png"
+            loadingBitmapUri="pkg:/images/tile/placeholder_image_thumbnails.png"
+            loadDisplayMode="scaleToFill"
+            translation="[150,100]" />
+        <Label
+            id="titleLabel"
+            color="#000000"
+            translation="[700, 200]"
+            width="700"
+            maxLines="1"/>
+        <Label
+            id="decriptionLabel"
+            color="#000000"
+            width="800"
+            maxLines="6"
+            wrap="true"
+            translation="[700, 300]"/>
+        <Button
+            id="playButton"
+            translation="[700, 600]"
+            minWidth="300"
+            maxWidth="300"
+            height="100"
+            showFocusFootprint="true"
+            textColor="#000000"
+            focusFootprintBitmapUri="pkg:/images/search/focus.9.png"
+            focusBitmapUri="pkg:/images/search/focus.9.png"
+            iconUri="pkg:/images/play2.png"
+            focusedIconUri="pkg:/images/play2.png"
+            text="Play"/>
+        <!-- Title -->
+        <!-- description -->
+        <!-- button if you are movie -->
+        <!-- <Video
+            id="video"
+            width="1920"
+            height="1080"
+            translation="[0,0]"
+            visible="false"> -->
+        <!-- </Video> -->
+        <Dialog
+            title="Video playback error"
+            message="Error playing the stream"
+            id="notAvailableDialog"
+            optionsDialog="false"
+            visible="false">
+        </Dialog>
+        <Timer
+            id="timer"
+            repeat="false"/>
+    </children>
+</component>

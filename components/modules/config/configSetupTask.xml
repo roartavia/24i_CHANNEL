@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Fetches Feeds necessary to start the app and modify the state of the app -->
+<component name="ConfigSetupTask" extends="Task">
+    <script type="text/brightscript" uri="pkg:/components/modules/config/configSetupTask.brs" />
+    <script type="text/brightscript" uri="pkg:/source/commons.brs" />
+    <interface>
+        <!-- Notify when the endpoint returns correctly -->
+        <field id="success" type="integer" alwaysnotify="true"/>
+        <!-- Error Code when a feed fails -->
+        <field id="errorCode" type="integer" alwaysnotify="true"/>
+    </interface>
+</component>

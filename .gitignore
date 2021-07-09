@@ -1,0 +1,7 @@
+# VSCODE UTILS
+.out
+.vscode
+.prettierrc
+
+# MAC STUFF
+.DS_Store

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ChannelParser" extends="Task">
+    <script type="text/brightscript" uri="pkg:/components/modules/parser/channelParser.brs" />
+    <script type="text/brightscript" uri="pkg:/source/commons.brs" />
+    <interface>
+        <field id="channels" type="array"/>
+        <field id="content" type="node" alwaysNotify="true"/>
+        <field id="errorCode" type="integer" />
+        <!-- If you want to search for and id and return the position in the content
+            the position is returned in searchedResults before the content is set, so no
+            need to observe the field in the parent -->
+        <field id="searchItemId" type="string"/>
+        <field id="searchedResultsPos" type="array"/>
+    </interface>
+</component>

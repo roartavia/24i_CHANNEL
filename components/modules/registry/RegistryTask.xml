@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="RegistryTask" extends="Task">
+    <script type="text/brightscript" uri="pkg:/components/modules/registry/RegistryTask.brs" />
+    <interface>
+        <!-- The section name for the registry section to work on -->
+        <field id="section" type="String" value="Default" />
+        <!-- The values used for a SET -->
+        <field id="values" type="AssocArray" />
+        <!-- The key used for a GET or DELETE -->
+        <field id="key" type="String" />
+        <!-- Specifies what to expect from this task. Can be one of:
+        GET- will get the value specified by key, or all values for the section if key is empty
+        SET- will set the keys/values specified in values
+        DELETE- will delete the value specified by key, or all values if no key specified -->
+        <field id="method" type="String" value="GET"/>
+        <!-- Indicates if the operation was successful -->
+        <field id="success" type="Boolean" alwaysNotify="true" />
+    </interface>
+</component>

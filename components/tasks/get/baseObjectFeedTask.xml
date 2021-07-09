@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Base Feed Task to Fetch a Json file -->
+<component name="BaseObjectFeedTask" extends="Task">
+    <script type="text/brightscript" uri="pkg:/components/tasks/get/baseObjectFeedTask.brs" />
+    <script type="text/brightscript" uri="pkg:/source/commons.brs" />
+    <interface>
+        <field id="method" type="string" value="GET"/>
+        <field id="postData" type="AssocArray" />
+        <!-- URL to fetch feed -->
+        <field id="fetchURL" type="string"/>
+        <!-- Authorization Header Value -->
+        <field id="authHeader" type="string"/>
+        <!-- Status Code when feed fails -->
+        <field id="statusCode" type="integer"/>
+        <!-- The type of feed. Can be one of "JSON" or an empty string. If not "JSON", the string value will be set to {value: stringValue}. -->
+        <field id="feedType" type="String" value="JSON" />
+        <!-- Response of the feed in object format -->
+        <field id="feedResponseObject" type="assocarray" alwaysnotify="true"/>
+        <!-- Name of the feed to fetch -->
+        <field id="feedName" type="string"/>
+    </interface>
+</component>

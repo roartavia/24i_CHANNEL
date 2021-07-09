@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="LoadingScreenUI" extends="Group">
+    <script type="text/brightscript" uri="pkg:/components/ui/loading/loadingScreenUI.brs" />
+    <interface>
+    </interface>
+    <children>
+        <Poster
+            width="1920"
+            height="1080"
+            translation="[0,0]"
+            uri="pkg:/images/splash.png"/>
+        <!-- Loading spinner -->
+        <BusySpinner
+            id="spinner"
+            translation="[913,700]"
+            clockwise="true"
+            spinInterval="1.5"/>
+    </children>
+</component>

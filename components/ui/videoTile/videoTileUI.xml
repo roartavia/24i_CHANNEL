@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="VideoTileUI" extends="Group">
+    <script type="text/brightscript" uri="pkg:/components/ui/videoTile/videoTileUI.brs" />
+    <interface>
+        <!-- Roku default item content for rowlist item -->
+        <field id="itemContent" type="node" onChange="showcontent"/>
+    </interface>
+    <children>
+        <Group
+            id="channelGroup">
+            <!-- Tile Image -->
+            <Poster
+              id="tileImage"
+              width="200"
+              height="300"
+              failedBitmapUri="pkg:/images/tile/placeholder_image_thumbnails.png"
+              loadingBitmapUri="pkg:/images/tile/placeholder_image_thumbnails.png"
+              loadDisplayMode="scaleToFill"
+              translation="[0,0]" />
+        </Group>
+    </children>
+</component>

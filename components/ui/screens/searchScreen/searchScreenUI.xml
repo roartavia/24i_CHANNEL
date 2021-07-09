@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SearchScreenUI" extends="Group">
+    <script type="text/brightscript" uri="pkg:/components/ui/screens/searchScreen/searchScreenUI.brs" />
+    <script type="text/brightscript" uri="pkg:/source/commons.brs" />
+    <interface>
+        <!-- Set the focus to this screen -->
+        <function name="setFocus" />
+    </interface>
+    <children>
+        <!-- UI -->
+        <Rectangle
+            color="#282828"
+            width="1920"
+            height="1080"
+            translation="[0,0]" />
+        <LayoutGroup
+            translation="[200,300]"
+            layoutDirection="vert"
+            itemSpacings="[20, 10, 60, 20]"
+            horizAlignment="left"
+            vertAlignment="center" >
+            <SimpleLabel
+                text="Search"/>
+            <LayoutGroup
+                layoutDirection="horiz"
+                itemSpacings="[10]">
+                <TextEditBox
+                    id="input"
+                    hintText="Press ok to display keyboard"
+                    width="650"
+                    height="100"
+                    maxTextLength="75"
+                    clearOnDownKey="false"/>
+                <CheckList
+                    id="filters"
+                    vertFocusAnimationStyle="floatingFocus"
+                    itemSize="[200,48]">
+                    <ContentNode id="options" role = "content" >
+                        <ContentNode title = "Movies" />
+                        <ContentNode title = "Series" />
+                    </ContentNode>
+                </CheckList>
+            </LayoutGroup>
+            <Button
+                id="searchButton"
+                minWidth="300"
+                maxWidth="300"
+                height="100"
+                showFocusFootprint="true"
+                focusFootprintBitmapUri="pkg:/images/search/unFocus.9.png"
+                focusBitmapUri="pkg:/images/search/focus.9.png"
+                iconUri="pkg:/images/searchIcon2.png"
+                focusedIconUri="pkg:/images/searchIcon2.png"
+                text="Search"/>
+            <SimpleLabel
+                id="labelResults"
+                text="Results:"/>
+        </LayoutGroup>
+        <!-- ROWLIST WITH RESULTS -->
+        <RowList
+            id="results"
+            translation="[200, 500]"
+            showRowCounterForShortRows="false"
+            itemComponentName="VideoTileUI"
+            itemSize="[1920, 300]"
+            rowItemSpacing="[[35, 0]]"
+            rowItemSize="[[200, 300]]"
+            itemSpacing="[90, 106]"
+            rowSpacings="[106]"
+            showRowCounter="[true]"
+            rowCounterRightOffset="0"
+            showRowLabel="[true]"
+            rowLabelOffset="[[105, 15]]"
+            drawFocusFeedback="true"
+            rowLabelColor="#ebebeb"
+            focusXOffset="[20]"
+            rowFocusAnimationStyle="floatingFocus">
+        </RowList>
+    </children>
+</component>

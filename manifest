@@ -1,0 +1,33 @@
+'********** Copyright 2021 RODOLFO ARTAVIA.  All Rights Reserved. **********
+
+title=24i TEST
+
+major_version=1
+minor_version=0
+build_version=0
+
+ui_resolutions=fhd
+
+#### Image sizes are FHD: 540x405px | HD: 290x218px | SD: 214x144px
+mm_icon_focus_hd=pkg:/images/appIcon.png
+mm_icon_focus_sd=pkg:/images/appIcon.png
+
+#### Image sizes are FHD: 1920x1080px | HD: 1280x720px | SD: 720x480px
+splash_screen_fhd=pkg:/images/splash.png
+splash_screen_hd=pkg:/images/splash.png
+splash_screen_sd=pkg:/images/splash.png
+
+splash_rsg_optimization=1
+
+splash_color=#000000
+splash_min_time=500
+
+# DRM Enable Section
+requires_widevine_drm=1
+requires_widevine_version=1.0
+
+# DEBUG CONSTANTS
+bs_const=debug=true
+
+# TODO: base endpoint - for now use local
+config_file=http://192.168.1.233:8080

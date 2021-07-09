@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="WatchScreenUI" extends="Group">
+    <script type="text/brightscript" uri="pkg:/components/ui/screens/watchScreen/watchScreenUI.brs" />
+    <interface>
+        <!-- Sets data for the watch page -->
+        <function name="updateContent" />
+        <!-- Set the focus to this screen -->
+        <function name="setFocus" />
+    </interface>
+    <children>
+        <Group
+            id="watchContainer">
+            <Poster
+                width="1920"
+                height="1080"
+                uri="pkg:/images/homeBackground.png"
+                translation="[0, 0]" />
+            <!-- @TODO: use a inverted image + maskGroup -->
+            <Poster
+                width="1920"
+                height="1080"
+                uri="pkg:/images/gradient.png"
+                translation="[0, 0]" />
+            <RowList
+                id="videosRowList"
+                translation="[130, 500]"
+                showRowCounterForShortRows="false"
+                itemComponentName="VideoTileUI"
+                itemSize="[1920, 300]"
+                rowItemSpacing="[[35, 0]]"
+                rowItemSize="[[200, 300]]"
+                itemSpacing="[90, 106]"
+                rowSpacings="[106]"
+                showRowCounter="[true]"
+                rowCounterRightOffset="0"
+                showRowLabel="[true]"
+                rowLabelOffset="[[105, 15]]"
+                drawFocusFeedback="true"
+                rowLabelColor="#ebebeb"
+                focusXOffset="[20]"
+                rowFocusAnimationStyle="floatingFocus">
+            </RowList>
+            <!-- Fake menu -->
+            <Label
+                color="#000000"
+                translation="[1500, 75]"
+                text="Press * To Search"/>
+        </Group>
+    </children>
+</component>
